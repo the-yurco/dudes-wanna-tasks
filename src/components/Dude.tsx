@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// Define the type for a todo item
 type TItem = {
 	id: number;
 	text: string;
@@ -7,6 +8,7 @@ type TItem = {
 };
 
 const Dude = () => {
+	// State declarations using the useState hook
 	const [todos, setTodos] = useState<TItem[]>([
 		{
 			id: 1,
@@ -22,6 +24,7 @@ const Dude = () => {
 
 	const [input, setInput] = useState<string>('');
 
+	// Function to toggle the completion status of a todo
 	const handleToggle = (id: number) => {
 		setTodos(
 			todos.map((todo) => {
@@ -33,14 +36,18 @@ const Dude = () => {
 		);
 	};
 
+	// Function to add a new todo to the list
 	const handleClick = () => {
 		const newTodo: TItem = { id: Date.now(), text: input, completed: false };
 		setTodos([...todos, newTodo]);
 	};
 
+	// JSX rendering
 	return (
 		<section id="todo_component_container">
 			<img src="/logo.png" className="header" alt="todo list logo"></img>
+
+			{/* List of todos */}
 			<div className="status_container">
 				<ul className="status_list">
 					{todos.map((todo) => (
@@ -57,6 +64,8 @@ const Dude = () => {
 					))}
 				</ul>
 			</div>
+
+			{/* Input field for adding new todos */}
 			<div className="action_container">
 				<input
 					type="text"
