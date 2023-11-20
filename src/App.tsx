@@ -1,12 +1,12 @@
 import React from 'react';
 
 import './App.css';
-import NiggaDude from './components/NiggaDude';
+import Dude from './components/Dude';
 
 function App() {
 	return (
 		<>
-			<NiggaDude />
+			<Dude />
 		</>
 	);
 }

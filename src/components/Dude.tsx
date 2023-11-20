@@ -6,7 +6,7 @@ type TItem = {
 	completed: boolean;
 };
 
-const NiggaDude = () => {
+const Dude = () => {
 	const [todos, setTodos] = useState<TItem[]>([
 		{
 			id: 1,
@@ -72,4 +72,4 @@ const NiggaDude = () => {
 	);
 };
 
-export default NiggaDude;
+export default Dude;
