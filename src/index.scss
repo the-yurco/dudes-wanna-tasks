@@ -1,0 +1,64 @@
+body {
+	display: grid;
+	place-items: center;
+	background-color: #00a9ff;
+	height: 100dvh;
+}
+
+#todo_component_container {
+	background-color: #164863;
+	border-radius: 1rem;
+	padding: 1rem;
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	.header {
+		border-radius: 1rem;
+		text-align: center;
+	}
+
+	.status_container {
+		background-color: #427d9d;
+		color: #ddf2fd;
+		padding: 0.2rem 0;
+		border-radius: 0.7rem;
+
+		.status_list {
+			line-height: 1.6;
+			.list {
+				list-style-type: none;
+			}
+		}
+	}
+
+	.action_container {
+		display: flex;
+		justify-self: center;
+		align-self: center;
+		gap: 0.5rem;
+		.action_input {
+			border: #164863;
+			border-radius: 1rem;
+			padding: 0.2rem 1rem;
+			background-color: #ddf2fd;
+		}
+		.action_submit {
+			border: none;
+			background-color: #164863;
+			border: 1px solid #427d9d;
+			border-radius: 1rem;
+			padding: 0.4rem 1rem;
+			color: #ddf2fd;
+			transition: all 0.3s;
+
+			&:hover {
+				cursor: pointer;
+				background-color: #ddf2fd;
+				color: #164863;
+				border: 1px solid #ddf2fd;
+			}
+		}
+	}
+}
